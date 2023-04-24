@@ -116,3 +116,21 @@ conda activate <environment_name>
 
 
 
+## Genome Assembly Analysis
+### Busco
+#### Plotting Busco Scores
+It is common to plot BUSCO scores as a bar chart from a single run, or from different runs side-by-side to visualize like-for-like comparisons, e.g., of different species/strains or assembly versions. To encourage the use of a standard and distinctive colour scheme in publications, BUSCO includes a dedicated R (R Core Team, 2020) script to produce a figure and its source code that can be further edited, allowing one to customize the resulting bar chart (labels, fonts, axes, etc.). To run the script, Python is required. To produce the image, R and the ggplot2 library need to be available on the system. To plot the scores of one or multiple runs, it is sufficient to provide in a single folder the short_summary.txt files of each BUSCO run.
+Collect the short_summary*.txt files in one folder, e.g.: 
+```
+mkdir BUSCO_summaries/
+cp OUT1/short_summary.*.lineage_odb10.OUT1.txt ./BUSCO_summaries/
+cp OUT2/short_summary.*.lineage_odb10.OUT2.txt ./BUSCO_summaries/
+```
+Then, simply run the generate_plot.py script available in the BUSCO repository (https://gitlab.com/ezlab/busco/scripts), providing the path to the directory containing the summary files: 
+```
+python3 generate_plot.py -wd BUSCO_summaries
+```
+A *.png image file and the corresponding R source code file, which can be further edited to make cosmetic adjustments to the plot, will be produced in the same folder containing the BUSCO summaries. By default, the run name is used as the label for each plotted result, and this is automatically extracted from the short summary file name: so, for short_summary.generic.lineage_odb10.OUT1.txt, the label would be “OUT1”. You can modify this in the file name as long as you keep the naming convention, e.g.: short_summary.generic.lineage_odb10.[edit_name_here].txt, or you can simply edit the R source code file to change any plotting parameters and produce a personalized bar chart by running the code manually in your R environment. However, we suggest keeping the same color scheme. By adding the --no_r flag to the command, the script will simply produce the R script required to reproduce the plot, which can then run on any system with R and ggplot2 installed. Figure 1 shows an example of the resulting default plot.
+
+
+
