@@ -114,6 +114,28 @@ conda deactivate
 conda activate <environment_name>
 ```
 ## Trimming and Quality Control
+### Quality Control of Raw Reads
+Checking the quality of your raw reads is an important step before moving forward to the trimming stage. This can be done using the following programmes:
+* NanoStat (https://github.com/wdecoster/nanostat)
+* FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+* NanoQC for Oxford Nanopore Technologies only (https://github.com/wdecoster/nanoQC)
+
+An example of the code needed for these programmes is below:
+```
+conda activate fastqc
+fastqc <read_1.fq.gz>
+conda deactivate
+```
+```
+conda activate NanoStat
+NanoStat --fastq read_1.fq.gz -o /path/to/file/ -n read_1_Raw_StatReport
+conda deactivate
+```
+```
+conda activate nanoQC
+nanoQC ONT_read.fq.gz -o ONT_read_Raw_NanoQC -1 500
+conda deactivate
+```
 
 ## Genome Assembly
 
