@@ -33,3 +33,16 @@ conda activate <environment_name>
 conda install -c bioconda ...
 conda deactivate
 
+### Using Conda to Run Programmes:
+1.	To keep track of the conda environments you have, you can list them using the command below.
+conda env list
+2.	If you accidentally make an environment that you no longer need you can remove it using the below command.
+conda env remove -n <environment_name>
+3.	In order to use the programme you want, you need to activate the associated conda environment using the following command.
+conda activate <environment_name>
+e.g., conda activate fastqc
+4.	If you want to use a different programme, ensure to deactivate the current conda environment before you activate the next conda environment using the following commands.
+conda deactivate
+conda activate <environment_name>
+
+
