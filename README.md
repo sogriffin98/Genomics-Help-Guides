@@ -113,8 +113,7 @@ conda activate <environment_name>
 conda deactivate
 conda activate <environment_name>
 ```
-## Trimming and Quality Control
-### Quality Control of Raw Reads
+## Quality Control of Raw Reads
 Checking the quality of your raw reads is an important step before moving forward to the trimming stage. This can be done using the following programmes:
 * NanoStat (https://github.com/wdecoster/nanostat)
 * FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
@@ -136,8 +135,8 @@ conda activate nanoQC
 nanoQC ONT_read.fq.gz -o ONT_read_Raw_NanoQC -1 500
 conda deactivate
 ```
-### Trimming of Illumina Technologies Reads
-#### Trim Galore
+## Trimming of Illumina Technologies Reads
+### Trim Galore
 Trim Galore is a wrapper around Cutadapt and FastQC to consistently apply adapter and quality trimming to FastQ files, with extra functionality for RRBS data (https://github.com/FelixKrueger/TrimGalore).
 The user guide is here: https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md
 
@@ -148,11 +147,11 @@ trim_galore --paired read_1.fq.gz read_2.fq.gz
 conda deactivate
 ```
 
-### Trimming of Oxford Nanopore Technologies Reads
-#### NanoFilt
+##Trimming of Oxford Nanopore Technologies Reads
+### NanoFilt
 
 
-#### Prowler
+### Prowler
 
 ## Genome Assembly
 
