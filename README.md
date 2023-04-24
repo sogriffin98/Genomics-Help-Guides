@@ -147,7 +147,7 @@ trim_galore --paired read_1.fq.gz read_2.fq.gz
 conda deactivate
 ```
 
-##Trimming of Oxford Nanopore Technologies Reads
+## Trimming of Oxford Nanopore Technologies Reads
 ### NanoFilt
 
 
