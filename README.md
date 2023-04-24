@@ -113,8 +113,9 @@ conda activate <environment_name>
 conda deactivate
 conda activate <environment_name>
 ```
+## Trimming and Quality Control
 
-
+## Genome Assembly
 
 ## Genome Assembly Analysis
 ### Busco
