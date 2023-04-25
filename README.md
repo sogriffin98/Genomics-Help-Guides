@@ -161,10 +161,23 @@ conda deactivate
 
 ## Trimming of Oxford Nanopore Technologies Reads
 ### NanoFilt
-
+NanoFilt is a programme for trimming and filtering long read data (https://github.com/wdecoster/nanofilt). NanoFilt does not work for .gz files, so you first have to unzip the file before using the programme. 
+Example of code:
+```
+gunzip -c ONT_read.fq.gz | NanoFilt -q 10 | gzip > ONT_read_trimmed.fq.gz
+```
 
 ### Prowler
-
+Prowler is a trimming and filtering programme used for long read data (https://github.com/ProwlerForNanopore/ProwlerTrimmer). Prowler does not work for .gz files, so you first have to unzip the file before using the programme. Before using the programme you need to move to your home directory and then change into the Prowler Trimmer folder for the programme to work. 
+An example of the code needed to do the above steps is below:
+```
+gunzip -c ONT_read.fq.gz
+cd ~
+cd ProwlerTrimmer
+python3 TrimmerLarge.py -f "ONT_read.fq" -i "/path/to/data/folder/" -o "/path/to/data/folder/" -w 100 -l 1000 -c LT -g U0 -m S -q 7 -d 0 -r .fastq
+cd /path/to/data/folder/
+gzip ONT_read_trimmed.fq
+```
 ## Genome Assembly
 
 ## Genome Assembly Analysis
