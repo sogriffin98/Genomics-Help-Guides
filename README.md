@@ -1,12 +1,16 @@
 # Genomics-Help-Guides
-A help guide repository created by PhD students Sarah Griffin and Rachel Gray in the Dr Evelyn Jensen Lab at Newcastle University, UK. We made these guides to help fellow students and others get started on their servers for their genomics research projects.
+A help guide repository created by PhD students Sarah Griffin and Rachel Gray in the Dr Evelyn Jensen Lab at Newcastle University, UK. We made these guides to help fellow students and others get started on the Rocket server at Newcastle University for their genomics research projects. The guides will also include lines of code for students not using the Rocket server so can be used by anyone installing Anaconda for the first time. 
 
 
 ## Installing Anaconda
 1. Log onto the server as normal using your credentials
-2. Navigate to your home directory. Make sure to change the * to match your c number
+2. Navigate to your home directory. Make sure to change the * to match your c number. This line of code is Rocket specific. 
 ```
 cd /mnt/nfs/home/c*********
+```
+If your server is not the Rocket server the line of code to change to your home directory will be:
+```
+cd ~ or cd /path/to/your/home/directory/
 ```
 3. Download conda using the below commands. Click enter and y/yes for all the prompts that appear on the terminal
 ```
@@ -18,6 +22,10 @@ bash Anaconda-latest-Linux-x86_64.sh
 1.	Source your .bashrc using the command below. Your .bashrc was created during the installation of conda. It is a hidden folder, so don’t worry about not being able to see it in your home directory it is there. The c******** is your C number which needs to be replaced by your own numbers, it may be a different letter depending on when you started at the university. This number is what you use to log into the computer normally or what you can see on the server.
 ```
 source /mnt/nfs/home/c********/.bashrc
+```
+or if your server is different to Rocket the line will have to be changed to the path to your home directory:
+```
+source /path/to/your/home/directory/.bashrc
 ```
 2. programme you are installing or the name of your project, whichever is easiest for you. e.g., conda create -n fastqc
 ```
@@ -67,6 +75,10 @@ conda activate <environment_name>
 1.	Ensure your .bashrc file is sourced using the command below. Your .bashrc was created during the installation of conda. It is a hidden folder, so don’t worry about not being able to see it in your home directory it is there. The c******** is your C number which needs to be replaced by your own numbers, it may be a different letter depending on when you started at the university. This number is what you use to log into the computer normally or what you can see on the server. You can tell it is sourced as you will see (base) at the start of your command line.
 ```
 source /mnt/nfs/home/c********/.bashrc
+```
+or if your server is different to Rocket the line will have to be changed to the path to your home directory:
+```
+source /path/to/your/home/directory/.bashrc
 ```
 2.	Create a conda environment using the command below. The name of this can either be the name of the programme you are installing or the name of your project, whichever is easiest for you.
 ```
