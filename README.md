@@ -27,7 +27,7 @@ or if your server is different to Rocket the line will have to be changed to the
 ```
 source /path/to/your/home/directory/.bashrc
 ```
-2. programme you are installing or the name of your project, whichever is easiest for you. e.g., conda create -n fastqc
+2. Create a conda environment using the command below. The name of this can either be the name of the programme you are installing or the name of your project, whichever is easiest for you. e.g., conda create -n fastqc
 ```
 conda create -n <environment_name>
 ```
