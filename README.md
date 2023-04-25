@@ -37,7 +37,7 @@ conda activate <environment_name>
 ```
 4.	Find the line of code to install the required programme by typing into google ‘programme name conda’. The top result will give you a website called Anaconda.org which has install instructions for your required programme. e.g., https://anaconda.org/bioconda/fastqc 
 ```
-conda install -c bioconda fastqc
+conda install -c bioconda <name_of_programme>
 ```
 5.	If you want to keep the same conda environment for you project you can keep installing the programmes you would like into that environment using the method mentioned in step 5.
 6.	After you have finished installing your required programme(s), deactivate the conda environment if you are not going to use that programme straight away.
