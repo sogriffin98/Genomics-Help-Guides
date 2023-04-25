@@ -130,8 +130,8 @@ Checking the quality of your raw reads is an important step before moving forwar
 * NanoStat (https://github.com/wdecoster/nanostat)
 * FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 * NanoQC for Oxford Nanopore Technologies only (https://github.com/wdecoster/nanoQC)
-Make sure you have installed the programmes before you start.
-An example of the code needed for these programmes is below:
+
+Make sure you have installed the programmes before you start. An example of the code needed for these programmes is below:
 ```
 conda activate fastqc
 fastqc <read_1.fq.gz>
