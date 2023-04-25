@@ -166,7 +166,6 @@ Example of code:
 ```
 gunzip -c ONT_read.fq.gz | NanoFilt -q 10 | gzip > ONT_read_trimmed.fq.gz
 ```
-
 ### Prowler
 Prowler is a trimming and filtering programme used for long read data (https://github.com/ProwlerForNanopore/ProwlerTrimmer). Prowler does not work for .gz files, so you first have to unzip the file before using the programme. Before using the programme you need to move to your home directory and then change into the Prowler Trimmer folder for the programme to work. 
 An example of the code needed to do the above steps is below:
