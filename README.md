@@ -1,6 +1,21 @@
 # Genomics-Help-Guides
 A help guide repository created by PhD students Sarah Griffin and Rachel Gray in the Dr Evelyn Jensen Lab at Newcastle University, UK. We made these guides to help fellow students and others get started on the Rocket server at Newcastle University for their genomics research projects. The guides will also include lines of code for students not using the Rocket server so can be used by anyone installing Anaconda for the first time. 
 
+## Rocket HPC
+### Step 1 (Dr Evelyn Jensen will do this):
+Add new member to a project: https://services.ncl.ac.uk/itservice/research/hpc/hpcmembership/
+### Step 2: Register self 
+1. This can only be done once you know the project name you are registered with: https://services.ncl.ac.uk/itservice/research/hpc/hpcregistration/
+2. Project name should be ejwg or something similar (will be told to Evelyn when she registers you). Funding can be left blank.
+3. Then log into here with your student ID and password: https://nuservice.ncl.ac.uk/HEAT/Modules/SelfService/#home
+4. Then, click on “service catalogue” and search for “unix”. Then it is the unix timeshare service request (below) and I think in here you just type that you want an account to access Rocket HPC and that you are registered to the “ejwg” project.
+### Step 3: Logging in on campus for first time
+Follow the steps on this webpage: https://services.ncl.ac.uk/itservice/research/hpc/access-connecting/
+### Step 4: Enabling off campus log in
+Follow the steps on these webpages to enable off campus log in:
+https://services.ncl.ac.uk/itservice/research/hpc/access-connectingfromoff-campus/
+https://services.ncl.ac.uk/itservice/technical-services/unix-time-sharing/
+https://services.ncl.ac.uk/itservice/technical-services/unix-time-sharing/ssh/
 
 ## Installing Anaconda
 1. Log onto the server as normal using your credentials
