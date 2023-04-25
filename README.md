@@ -147,7 +147,7 @@ conda activate nanoQC
 nanoQC ONT_read.fq.gz -o ONT_read_Raw_NanoQC -1 500
 conda deactivate
 ```
-## Trimming of Illumina Technologies Reads
+## Trimming of Illumina Reads
 ### Trim Galore
 Trim Galore is a wrapper around Cutadapt and FastQC to consistently apply adapter and quality trimming to FastQ files, with extra functionality for RRBS data (https://github.com/FelixKrueger/TrimGalore).
 The user guide is here: https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md
