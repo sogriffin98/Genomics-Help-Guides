@@ -178,6 +178,28 @@ python3 TrimmerLarge.py -f "ONT_read.fq" -i "/path/to/data/folder/" -o "/path/to
 cd /path/to/data/folder/
 gzip ONT_read_trimmed.fq
 ```
+## Quality Control of Trimmed Reads
+Checking the quality of your trimmed reads is an important step before moving forward to the genome assembly stage to check that your reads are trimmed enough. This can be done using the same programmes as above:
+* NanoStat (https://github.com/wdecoster/nanostat)
+* FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+* NanoQC for Oxford Nanopore Technologies only (https://github.com/wdecoster/nanoQC)
+
+Make sure you have installed the programmes before you start. An example of the code needed for these programmes is below:
+```
+conda activate fastqc
+fastqc <read_1_trimmed.fq.gz>
+conda deactivate
+```
+```
+conda activate NanoStat
+NanoStat --fastq read_1_trimmed.fq.gz -o /path/to/file/ -n read_1_trimmed_StatReport
+conda deactivate
+```
+```
+conda activate nanoQC
+nanoQC ONT_read_trimmed.fq.gz -o ONT_read_trimmed_NanoQC -1 500
+conda deactivate
+```
 ## Genome Assembly
 
 ## Genome Assembly Analysis
