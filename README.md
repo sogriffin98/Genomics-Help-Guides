@@ -1,7 +1,7 @@
 # Genomics-Help-Guides
 A help guide repository created by PhD students Sarah Griffin and Rachel Gray in the Dr Evelyn Jensen Lab at Newcastle University, UK. We made these guides to help fellow students and others get started on the Rocket server at Newcastle University for their genomics research projects. The guides will also include lines of code for students not using the Rocket server so can be used by anyone installing Anaconda for the first time. 
 
-## Registering for the Rocket HPC
+## Registering for the Rocket HPC (Newcastle University Students/Staff Only)
 ### Step 1 (Dr Evelyn Jensen will do this):
 Add new member to a project: https://services.ncl.ac.uk/itservice/research/hpc/hpcmembership/
 ### Step 2: Register self 
