@@ -164,6 +164,32 @@ conda activate nanoQC
 nanoQC ONT_read.fq.gz -o ONT_read_Raw_NanoQC -1 500
 conda deactivate
 ```
+## Using R on Rocket HPC
+On most high performance computer clusters, R can be started by simply typing R into the terminal. 
+For rocket the following commands should be ran: 
+```
+Module load R 
+R
+```
+This will open up the R environment. Bear in mind this is not Rstudio so the enviornment and figure panels cannot be viewed. 
+Figure results can be saved as a pdf as follows: 
+```
+pdf("pdfExample.pdf")
+plot(results)
+dev.off()
+```
+To save results that are in a dataframe as a csv: 
+```
+write.csv(DataFrame Name, "File Name.csv", row.names=FALSE)
+```
+To save R objects:
+```
+saveRDS(R_ojbect, file = "R_oject.RDS") 
+```
+This can then be read back into R later with:
+```
+R_ojbect <- readRDS("R_oject.RDS")
+```
 ## Trimming of Illumina Reads
 ### Trim Galore
 Trim Galore is a wrapper around Cutadapt and FastQC to consistently apply adapter and quality trimming to FastQ files, with extra functionality for RRBS data (https://github.com/FelixKrueger/TrimGalore).
