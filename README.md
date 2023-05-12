@@ -142,28 +142,6 @@ conda activate <environment_name>
 conda deactivate
 conda activate <environment_name>
 ```
-## Quality Control of Raw Reads
-Checking the quality of your raw reads is an important step before moving forward to the trimming stage. This can be done using the following programmes:
-* NanoStat (https://github.com/wdecoster/nanostat)
-* FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
-* NanoQC for Oxford Nanopore Technologies only (https://github.com/wdecoster/nanoQC)
-
-Make sure you have installed the programmes before you start. An example of the code needed for these programmes is below:
-```
-conda activate fastqc
-fastqc <read_1.fq.gz>
-conda deactivate
-```
-```
-conda activate NanoStat
-NanoStat --fastq read_1.fq.gz -o /path/to/file/ -n read_1_Raw_StatReport
-conda deactivate
-```
-```
-conda activate nanoQC
-nanoQC ONT_read.fq.gz -o ONT_read_Raw_NanoQC -1 500
-conda deactivate
-```
 ## Using R on Rocket HPC
 On most high performance computer clusters, R can be started by simply typing R into the terminal. 
 For rocket the following commands should be ran: 
@@ -190,6 +168,30 @@ This can then be read back into R later with:
 ```
 R_ojbect <- readRDS("R_oject.RDS")
 ```
+
+## Quality Control of Raw Reads
+Checking the quality of your raw reads is an important step before moving forward to the trimming stage. This can be done using the following programmes:
+* NanoStat (https://github.com/wdecoster/nanostat)
+* FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+* NanoQC for Oxford Nanopore Technologies only (https://github.com/wdecoster/nanoQC)
+
+Make sure you have installed the programmes before you start. An example of the code needed for these programmes is below:
+```
+conda activate fastqc
+fastqc <read_1.fq.gz>
+conda deactivate
+```
+```
+conda activate NanoStat
+NanoStat --fastq read_1.fq.gz -o /path/to/file/ -n read_1_Raw_StatReport
+conda deactivate
+```
+```
+conda activate nanoQC
+nanoQC ONT_read.fq.gz -o ONT_read_Raw_NanoQC -1 500
+conda deactivate
+```
+
 ## Trimming of Illumina Reads
 ### Trim Galore
 Trim Galore is a wrapper around Cutadapt and FastQC to consistently apply adapter and quality trimming to FastQ files, with extra functionality for RRBS data (https://github.com/FelixKrueger/TrimGalore).
